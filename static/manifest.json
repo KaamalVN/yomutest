@@ -1,9 +1,9 @@
-{
+u{
 	"name": "Yomu Reader",
 	"short_name": "YomuReader",
 	"description": "Modern manga reader with AI translation and colorization features",
-	"start_url": "/",
-	"display": "fullscreen",
+	"start_url": "/?source=pwa",
+	"display": "standalone",
 	"background_color": "#0c0c0c",
 	"theme_color": "#8b5cf6",
 	"orientation": "portrait-primary",
