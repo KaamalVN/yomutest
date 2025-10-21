@@ -1,0 +1,35 @@
+{
+	"name": "Yomu Reader",
+	"short_name": "YomuReader",
+	"description": "Modern manga reader with AI translation and colorization features",
+	"start_url": "/",
+	"display": "standalone",
+	"background_color": "#0c0c0c",
+	"theme_color": "#8b5cf6",
+	"orientation": "portrait-primary",
+	"categories": ["entertainment", "books"],
+	"lang": "en",
+	"dir": "ltr",
+	"icons": [
+		{
+			"src": "/placeholder.svg?size=192x192&text=📚",
+			"sizes": "192x192",
+			"type": "image/svg+xml",
+			"purpose": "any maskable"
+		},
+		{
+			"src": "/placeholder.svg?size=512x512&text=📚",
+			"sizes": "512x512",
+			"type": "image/svg+xml",
+			"purpose": "any maskable"
+		}
+	],
+	"screenshots": [
+		{
+			"src": "/placeholder.svg?size=wide&text=Manga Reader Screenshot",
+			"sizes": "1280x720",
+			"type": "image/svg+xml",
+			"form_factor": "wide"
+		}
+	]
+}
