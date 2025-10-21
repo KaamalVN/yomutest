@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { currentChapter, isFullscreen } from "../stores/manga-store.js";
-	import { mangaActions } from "../stores/manga-store.js";
+	import { currentChapter, isFullscreen } from "../stores/manga-store";
+	import { mangaActions } from "../stores/manga-store";
 	import { fade } from "svelte/transition";
 	import { onMount } from "svelte";
 	import { BookOpen, Clipboard } from "lucide-svelte";

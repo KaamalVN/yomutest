@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { preferences } from "../stores/manga-store.js";
-	import { mangaActions } from "../stores/manga-store.js";
-	import { mockApi, languages, models } from "../utils/api.js";
+	import { preferences } from "../stores/manga-store";
+	import { mangaActions } from "../stores/manga-store";
+	import { mockApi, languages, models } from "../utils/api";
 	import { Button } from "$lib/components/ui/button";
 	import { Input } from "$lib/components/ui/input";
 	import { Label } from "$lib/components/ui/label";

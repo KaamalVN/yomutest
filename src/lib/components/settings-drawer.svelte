@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { isSettingsOpen } from "../stores/manga-store.js";
-	import { mangaActions } from "../stores/manga-store.js";
+	import { isSettingsOpen } from "../stores/manga-store";
+	import { mangaActions } from "../stores/manga-store";
 	import { Drawer, DrawerContent, DrawerHeader, DrawerTitle, DrawerDescription } from "$lib/components/ui/drawer";
 	import { Button } from "$lib/components/ui/button";
 	import { X, Settings, Sparkles } from "lucide-svelte";

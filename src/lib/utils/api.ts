@@ -1,4 +1,4 @@
-import type { MangaChapter, MangaPage } from "../types/manga.js";
+import type { MangaChapter, MangaPage } from "../types/manga";
 
 // Mock API functions - replace with real API calls
 export const mockApi = {

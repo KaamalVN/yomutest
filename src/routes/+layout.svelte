@@ -33,59 +33,10 @@
     <title>Yomu Reader</title>
 </svelte:head>
 
-{#if browser}
-    <Toaster />
-{/if}
+<Toaster />
 
 <slot />
 
 
 
-<style>
-    /* Import Manrope font */
-    @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 
-    /* Global styles */
-    :global(html, body) {
-        height: 100%;
-        overflow: hidden;
-        font-family: "Manrope", sans-serif;
-        scroll-behavior: smooth;
-    }
-
-    /* Custom scrollbar for webkit browsers */
-    :global(.overflow-y-auto::-webkit-scrollbar) {
-        width: 6px;
-    }
-
-    :global(.overflow-y-auto::-webkit-scrollbar-track) {
-        background: hsl(var(--muted));
-    }
-
-    :global(.overflow-y-auto::-webkit-scrollbar-thumb) {
-        background: hsl(var(--muted-foreground) / 0.3);
-        border-radius: 3px;
-    }
-
-    :global(.overflow-y-auto::-webkit-scrollbar-thumb:hover) {
-        background: hsl(var(--muted-foreground) / 0.5);
-    }
-
-    /* Focus styles for accessibility */
-    :global(*:focus-visible) {
-        outline: 2px solid hsl(var(--primary));
-        outline-offset: 2px;
-    }
-
-    /* Prevent horizontal scrolling */
-    :global(body) {
-        overflow-x: hidden;
-    }
-
-    /* Mobile optimizations */
-    @media (max-width: 768px) {
-        :global(body) {
-            -webkit-overflow-scrolling: touch;
-        }
-    }
-</style>

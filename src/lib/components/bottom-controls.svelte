@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { isFullscreen, preferences } from "../stores/manga-store.js";
-	import { mangaActions } from "../stores/manga-store.js";
-	import { languages } from "../utils/api.js";
+	import { isFullscreen, preferences } from "../stores/manga-store";
+	import { mangaActions } from "../stores/manga-store";
+	import { languages } from "../utils/api";
 	import { fade } from "svelte/transition";
 	import { Button } from "$lib/components/ui/button";
 	import { Settings, Languages, Palette, Play, Check } from "lucide-svelte";

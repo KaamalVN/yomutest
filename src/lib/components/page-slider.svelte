@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { currentPage, totalPages, isFullscreen } from "../stores/manga-store.js";
-	import { mangaActions } from "../stores/manga-store.js";
+	import { currentPage, totalPages, isFullscreen } from "../stores/manga-store";
+	import { mangaActions } from "../stores/manga-store";
 	import { fade } from "svelte/transition";
 
 	let hidden = $derived($isFullscreen);

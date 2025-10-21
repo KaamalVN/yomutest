@@ -1,4 +1,4 @@
-const CACHE_NAME = "yomu-reader-v1";
+const CACHE_NAME = "yomu-reader-v2";
 const STATIC_ASSETS = ["/", "/manifest.json", "https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"];
 
 // Install event - cache static assets

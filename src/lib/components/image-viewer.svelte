@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { currentChapter, currentPage, isFullscreen } from "../stores/manga-store.js";
-	import { mangaActions } from "../stores/manga-store.js";
+	import { currentChapter, currentPage, isFullscreen } from "../stores/manga-store";
+	import { mangaActions } from "../stores/manga-store";
 	import { fade } from "svelte/transition";
 	import { onMount } from "svelte";
 	import { BookOpen } from "lucide-svelte";
@@ -96,7 +96,21 @@
 		<div class="flex flex-col items-center gap-3 p-4 pb-24 max-w-4xl mx-auto min-h-full">
 			{#each pages as page, index (page.id)}
 				<div class="relative w-full max-w-2xl" transition:fade={{ duration: 300, delay: index * 50 }}>
-					<img bind:this={imageElements[index]} src={page.imageUrl} alt="Manga page {page.pageNumber}" class="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:shadow-xl transition-shadow duration-200 select-none" loading="lazy" onclick={handleImageClick} onkeydown={(e) => e.key === "Enter" && handleImageClick()} tabindex="0" role="button" aria-label="Page {page.pageNumber}, click to toggle fullscreen" draggable="false" />
+					<button 
+						class="w-full focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-lg"
+						onclick={handleImageClick} 
+						onkeydown={(e) => e.key === "Enter" && handleImageClick()} 
+						aria-label="Page {page.pageNumber}, click to toggle fullscreen"
+					>
+						<img 
+							bind:this={imageElements[index]} 
+							src={page.imageUrl} 
+							alt="Manga page {page.pageNumber}" 
+							class="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:shadow-xl transition-shadow duration-200 select-none" 
+							loading="lazy" 
+							draggable="false" 
+						/>
+					</button>
 
 					<!-- Page number overlay -->
 					<div class="absolute top-3 right-3 bg-black/80 text-white text-xs px-2 py-1 rounded-md font-medium">

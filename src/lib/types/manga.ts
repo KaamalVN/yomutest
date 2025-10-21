@@ -21,6 +21,7 @@ export interface UserPreferences {
 	targetLanguage: string;
 	apiKey: string;
 	modelSettings: ModelSettings;
+	clipboardUrl?: string;
 }
 
 export interface ModelSettings {
