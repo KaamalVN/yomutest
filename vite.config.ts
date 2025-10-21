@@ -4,6 +4,17 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
 	plugins: [sveltekit(), tailwindcss()],
+	optimizeDeps: {
+		exclude: [
+			'svelte-sonner', 
+			'lucide-svelte', 
+			'vaul-svelte', 
+			'tailwind-variants',
+			'bits-ui',
+			'tailwind-merge',
+			'@lucide/svelte'
+		]
+	},
 	test: {
 		expect: { requireAssertions: true },
 		projects: [

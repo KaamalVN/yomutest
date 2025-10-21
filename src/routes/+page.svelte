@@ -5,20 +5,34 @@
     import SettingsDrawer from './../lib/components/settings-drawer.svelte';
     import PageSlider from './../lib/components/page-slider.svelte';
     import { isFullscreen } from './../lib/stores/manga-store';
+    import { fade } from 'svelte/transition';
     
     let fullscreen = $derived($isFullscreen);
 </script>
 
 <div class="dark bg-background text-foreground min-h-screen flex flex-col font-['Manrope',sans-serif] overflow-hidden">
-    <Header />
+    {#if !fullscreen}
+        <div transition:fade={{ duration: 200 }}>
+            <Header />
+        </div>
+    {/if}
 
     <main class="flex-1 flex flex-col relative overflow-hidden">
         <div class="flex-1 relative">
             <ImageViewer />
-            <PageSlider />
+            {#if !fullscreen}
+                <div transition:fade={{ duration: 200 }}>
+                    <PageSlider />
+                </div>
+            {/if}
         </div>
     </main>
 
-    <BottomControls />
+    {#if !fullscreen}
+        <div transition:fade={{ duration: 200 }}>
+            <BottomControls />
+        </div>
+    {/if}
+    
     <SettingsDrawer />
 </div>

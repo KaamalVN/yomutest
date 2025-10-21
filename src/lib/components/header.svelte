@@ -3,7 +3,7 @@
 	import { mangaActions } from "../stores/manga-store";
 	import { fade } from "svelte/transition";
 	import { onMount } from "svelte";
-	import { BookOpen, Clipboard } from "lucide-svelte";
+	import { Clipboard } from "lucide-svelte";
 	import { toast } from "svelte-sonner";
 
 	let chapter = $derived($currentChapter);
@@ -33,7 +33,7 @@
 			<!-- Title and Chapter Info -->
 			<div class="flex items-center gap-4 min-w-0 flex-1">
 				<div class="p-2 bg-primary/10 rounded-lg">
-					<BookOpen class="size-5 text-primary" />
+					<img src="/yomu.png" alt="Yomu Reader" class="size-5" />
 				</div>
 				<div class="min-w-0 flex-1">
 					{#if chapter}
@@ -46,7 +46,7 @@
 							<span class="truncate max-w-48">{chapter.url}</span>
 						</div>
 					{:else}
-						<h1 class="font-semibold text-foreground text-lg">Manga Reader</h1>
+						<h1 class="font-semibold text-foreground text-lg">Yomu Reader</h1>
 						<p class="text-xs text-muted-foreground mt-1">Load a chapter to start reading</p>
 					{/if}
 				</div>

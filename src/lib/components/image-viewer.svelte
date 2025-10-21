@@ -3,7 +3,7 @@
 	import { mangaActions } from "../stores/manga-store";
 	import { fade } from "svelte/transition";
 	import { onMount } from "svelte";
-	import { BookOpen } from "lucide-svelte";
+
 
 	let viewerContainer: HTMLDivElement;
 	let imageElements: HTMLImageElement[] = [];
@@ -135,7 +135,7 @@
 		<div class="flex items-center justify-center min-h-full p-8">
 			<div class="text-center max-w-md mx-auto">
 				<div class="p-4 bg-primary/10 rounded-full w-fit mx-auto mb-6">
-					<BookOpen class="size-12 text-primary" />
+					<img src="/yomu.png" alt="Yomu Reader" class="size-12" />
 				</div>
 				<h2 class="text-xl font-semibold text-foreground mb-3">Welcome to Yomu Reader</h2>
 				<p class="text-muted-foreground leading-relaxed">Enter a manga chapter URL in the settings to get started reading.</p>

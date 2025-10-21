@@ -77,15 +77,29 @@
 				</div>
 			{/if}
 
-			<Button onclick={loadChapter} disabled={!chapterUrl.trim() || isLoading} class="w-full h-12 bg-primary hover:bg-primary/90 text-primary-foreground font-medium">
-				{#if isLoading}
-					<Loader class="size-4 mr-2 animate-spin" />
-					Loading Chapter...
-				{:else}
-					<ExternalLink class="size-4 mr-2" />
-					Load Chapter
-				{/if}
-			</Button>
+			<div class="flex gap-3">
+				<Button onclick={loadChapter} disabled={!chapterUrl.trim() || isLoading} class="flex-1 h-12 bg-primary hover:bg-primary/90 text-primary-foreground font-medium">
+					{#if isLoading}
+						<Loader class="size-4 mr-2 animate-spin" />
+						Loading Chapter...
+					{:else}
+						<ExternalLink class="size-4 mr-2" />
+						Load Chapter
+					{/if}
+				</Button>
+				
+				<Button 
+					variant="outline" 
+					onclick={() => {
+						chapterUrl = "https://example.com/sample-manga";
+						loadChapter();
+					}} 
+					disabled={isLoading}
+					class="h-12 px-4 border-border/50 hover:bg-accent/50"
+				>
+					Sample
+				</Button>
+			</div>
 		</CardContent>
 	</Card>
 

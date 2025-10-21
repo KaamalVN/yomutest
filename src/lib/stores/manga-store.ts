@@ -55,7 +55,32 @@ export const mangaActions = {
 	},
 
 	toggleFullscreen: () => {
-		appState.update((state) => ({ ...state, isFullscreen: !state.isFullscreen }));
+		appState.update((state) => {
+			const newFullscreenState = !state.isFullscreen;
+			
+			// Handle browser fullscreen API
+			if (typeof document !== 'undefined') {
+				if (newFullscreenState) {
+					// Enter fullscreen
+					if (document.documentElement.requestFullscreen) {
+						document.documentElement.requestFullscreen().catch(() => {
+							// Fallback if fullscreen API fails
+							console.log('Fullscreen API not available, using UI-only fullscreen');
+						});
+					}
+				} else {
+					// Exit fullscreen
+					if (document.fullscreenElement && document.exitFullscreen) {
+						document.exitFullscreen().catch(() => {
+							// Fallback if exit fullscreen fails
+							console.log('Exit fullscreen failed, using UI-only mode');
+						});
+					}
+				}
+			}
+			
+			return { ...state, isFullscreen: newFullscreenState };
+		});
 	},
 
 	toggleSettings: () => {
