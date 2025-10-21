@@ -31,10 +31,11 @@
 	],
 	"screenshots": [
 		{
-			"src": "/placeholder.svg?size=wide&text=Manga Reader Screenshot",
+			"src": "/yomu.png",
 			"sizes": "1280x720",
-			"type": "image/svg+xml",
-			"form_factor": "wide"
+			"type": "image/png",
+			"form_factor": "wide",
+			"label": "Yomu Reader - Modern Manga Reading Experience"
 		}
 	]
 }
